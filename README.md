@@ -27,3 +27,14 @@ docker-compose up servidor-central servidor-alice servidor-bob servidor-carol se
 docker-compose run --rm app-bob
 ```
 ## Pruebas del sistema
+[![docker-pull.jpg](https://i.postimg.cc/bNjv6QMv/docker-pull.jpg)](https://postimg.cc/BtMsb1JW)
+En la imagen se puede observar como, hacer el pull del arhivo docker-compose.yml.
+
+[![levantamiento-servidores.jpg](https://i.postimg.cc/GmLmRbbw/levantamiento-servidores.jpg)](https://postimg.cc/D8NTdkWB)
+En esta imagen ya se puede observar como se levantan los servidores incluyendo el servidor central.
+
+[![Probar-bob.jpg](https://i.postimg.cc/R0qC3G3g/Probar-bob.jpg)](https://postimg.cc/JyVCvN5X)
+En esta imagen ya se puede ver como se empieza a usar una aplicación en este caso la de Bob la cual despliega un menu principal, indicando la acción que quieres realizar, en este ejemplo se crea una nueva reunion donde se llenan los datos necesarios (si se ingresa mal un dato se vuelve  pedir o regresa al menu), sale un error pero es un error que no afecta el funcionamiento de la aplicación.
+
+[![Probar-david.jpg](https://i.postimg.cc/cLF44PJK/Probar-david.jpg)](https://postimg.cc/TKWXt7gG)
+En esta imagen se ejecuta la aplicacion de david, donde se verifica que la reunion agregada por bob tambien le sale a David y que puede modificarla.
