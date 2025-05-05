@@ -1,0 +1,48 @@
+ID: 96555b17-c9e6-4407-bf10-a222c4264b25
+Tema: Compu
+Organizador: Alice_White
+Invitados: [Eva_Brown, David_Black]
+Lugar: hjg
+Inicio: 2022-09-09T12:12
+Fin: 2023-09-09T12:13
+--------
+ID: b3918810-d176-48f6-8be0-67fb8a1e348c
+Tema: Tabla
+Organizador: Eva_Brown
+Invitados: [Alice_White]
+Lugar: Quito
+Inicio: 2023-08-07T13:23
+Fin: 2025-08-09T16:23
+--------
+ID: 21a5bdd6-623d-430a-800c-dc574f751bf3
+Tema: Mate
+Organizador: Eva_Brown
+Invitados: [Alice_White]
+Lugar: kjek
+Inicio: 2022-09-09T14:32
+Fin: 2022-09-09T15:32
+--------
+ID: f9aedbaa-8cc5-4880-8a87-99aeb332a723
+Tema: Hola
+Organizador: Carol_Simpson
+Invitados: [Eva_Brown, David_Black]
+Lugar: kr4
+Inicio: 2022-09-09T12:13
+Fin: 2022-09-09T15:23
+--------
+ID: f56a6a90-a04b-4d8b-950a-fc4c4de59a52
+Tema: 
+Organizador: Eva_Brown
+Invitados: []
+Lugar: 
+Inicio: 2022-09-09T13:23
+Fin: 2022-10-10T14:23
+ID: f56a6a90-a04b-4d8b-950a-fc4c4de59a52
+Tema: 
+Organizador: Eva_Brown
+Invitados: []
+Lugar: 
+Inicio: 2022-09-09T13:23
+Fin: 2022-10-10T14:23
+
+--------

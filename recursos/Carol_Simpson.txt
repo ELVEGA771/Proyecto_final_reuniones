@@ -1,0 +1,16 @@
+ID: f9aedbaa-8cc5-4880-8a87-99aeb332a723
+Tema: Hola
+Organizador: Carol_Simpson
+Invitados: [Eva_Brown, David_Black]
+Lugar: kr4
+Inicio: 2022-09-09T12:13
+Fin: 2022-09-09T15:23
+ID: f9aedbaa-8cc5-4880-8a87-99aeb332a723
+Tema: Hola
+Organizador: Carol_Simpson
+Invitados: [Eva_Brown, David_Black]
+Lugar: kr4
+Inicio: 2022-09-09T12:13
+Fin: 2022-09-09T15:23
+
+--------

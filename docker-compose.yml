@@ -1,0 +1,158 @@
+services:
+  servidor-central:
+    image: elvega/reuniones:latest
+    container_name: servidor-central
+    command: ["--mode=central", "--empleadosConfig=recursos/empleados.properties"]
+    ports:
+      - "9000:9000"
+    networks:
+      default: {}
+
+  # Servidores locales de empleados compartiendo el mismo volumen de recursos
+  servidor-alice:
+    image: elvega/reuniones:latest
+    container_name: servidor-alice
+    command: ["--mode=empleado", "--nombre=Alice_White", "--port=8081"]
+    ports:
+      - "8081:8081"
+    depends_on:
+      - servidor-central
+    networks:
+      default:
+        aliases:
+          - Alice_White
+    volumes:
+      - recursos:/app/recursos
+
+  servidor-bob:
+    image: elvega/reuniones:latest
+    container_name: servidor-bob
+    command: ["--mode=empleado", "--nombre=Bob_Smith", "--port=8082"]
+    ports:
+      - "8082:8082"
+    depends_on:
+      - servidor-central
+    networks:
+      default:
+        aliases:
+          - Bob_Smith
+    volumes:
+      - recursos:/app/recursos
+
+  servidor-carol:
+    image: elvega/reuniones:latest
+    container_name: servidor-carol
+    command: ["--mode=empleado", "--nombre=Carol_Simpson", "--port=8083"]
+    ports:
+      - "8083:8083"
+    depends_on:
+      - servidor-central
+    networks:
+      default:
+        aliases:
+          - Carol_Simpson
+    volumes:
+      - recursos:/app/recursos
+
+  servidor-david:
+    image: elvega/reuniones:latest
+    container_name: servidor-david
+    command: ["--mode=empleado", "--nombre=David_Black", "--port=8084"]
+    ports:
+      - "8084:8084"
+    depends_on:
+      - servidor-central
+    networks:
+      default:
+        aliases:
+          - David_Black
+    volumes:
+      - recursos:/app/recursos
+
+  servidor-eva:
+    image: elvega/reuniones:latest
+    container_name: servidor-eva
+    command: ["--mode=empleado", "--nombre=Eva_Brown", "--port=8085"]
+    ports:
+      - "8085:8085"
+    depends_on:
+      - servidor-central
+    networks:
+      default:
+        aliases:
+          - Eva_Brown
+    volumes:
+      - recursos:/app/recursos
+
+  # Apps por cada empleado
+  app-alice:
+    image: elvega/reuniones:latest
+    container_name: app-alice
+    command: ["--mode=app", "--nombre=Alice_White"]
+    stdin_open: true
+    tty: true
+    depends_on:
+      - servidor-alice
+    networks:
+      default: {}
+    volumes:
+      - recursos:/app/recursos
+
+  app-bob:
+    image: elvega/reuniones:latest
+    container_name: app-bob
+    command: [ "--mode=app", "--nombre=Bob_Smith" ]
+    stdin_open: true
+    tty: true
+    depends_on:
+      - servidor-bob
+    networks:
+      default: { }
+    volumes:
+      - recursos:/app/recursos
+
+  app-carol:
+    image: elvega/reuniones:latest
+    container_name: app-carol
+    command: [ "--mode=app", "--nombre=Carol_Simpson" ]
+    stdin_open: true
+    tty: true
+    depends_on:
+      - servidor-carol
+    networks:
+      default: { }
+    volumes:
+      - recursos:/app/recursos
+
+  app-david:
+    image: elvega/reuniones:latest
+    container_name: app-david
+    command: [ "--mode=app", "--nombre=David_Black" ]
+    stdin_open: true
+    tty: true
+    depends_on:
+      - servidor-david
+    networks:
+      default: { }
+    volumes:
+      - recursos:/app/recursos
+
+  app-eva:
+    image: elvega/reuniones:latest
+    container_name: app-eva
+    command: [ "--mode=app", "--nombre=Eva_Brown" ]
+    stdin_open: true
+    tty: true
+    depends_on:
+      - servidor-eva
+    networks:
+      default: { }
+    volumes:
+      - recursos:/app/recursos
+
+networks:
+  default:
+    name: red-reuniones
+
+volumes:
+  recursos:
